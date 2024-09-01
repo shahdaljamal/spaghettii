@@ -1,0 +1,232 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header Styles */
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Featured Section */
+#featured {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#featured img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Menu Item */
+.menu-item {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.menu-item img {
+    width: 150px;
+    height: 100px;
+    margin-right: 20px;
+    border-radius: 8px;
+}
+
+.menu-item h3 {
+    margin: 0;
+}
+
+/* Form Styles */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input, form select, form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+@media (max-width: 768px) {
+    .menu-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-item img {
+        width: 100%;
+        height: auto;
+    }
+}
+/* General Styles for Images */
+.menu-item img {
+    width: 150px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: adds rounded corners */
+}
+
+#featured img {
+    max-width: 100%; /* Make sure image scales with the container */
+    height: auto; /* Maintain aspect ratio */
+    margin: 10px; /* Optional: space around images */
+    border-radius: 8px; /* Optional: adds rounded corners */
+}
+<img src="Spaghetti.jpg" alt="Spaghetti" style="width: 150px; height: auto;">
+<img src="Spaghetti Carbonara.jpeg" alt="Spaghetti Carbonara" style="width: 150px; height: auto;">
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header Styles */
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Main Section */
+main {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 10px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea,
+form input[type="file"],
+form select {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form button {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #555;
+}
+/* Apply to all subdomains if applicable */
+body {
+    background-image: url('../wall.png'); /* Adjust the path as necessary */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-attachment: fixed; /* Keeps the background fixed on scroll */
+    background-position: center; /* Centers the image */
+}
+/* Add styling for menu images */
+.menu-images {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.menu-images img {
+    width: 30%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+}
+/* Styling for menu items */
+.menu-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.menu-item {
+    width: 23%;
+    margin: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: #fff;
+}
+
+.menu-item img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.menu-item h2 {
+    margin: 10px 0;
+}
+
+.menu-item p {
+    padding: 0 10px 10px;
+    color: #666;
+}
+
+/* Style for featured section */
+#featured {
+    text-align: center; /* Center align text and images */
+    padding: 20px;
+}
+
+#featured img {
+    width: 50%; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 240px; /* Maximum width of the image */
+    margin: 12px; /* Margin around each image */
+    border-radius: 8px; /* Optional: rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: shadow effect */
+}

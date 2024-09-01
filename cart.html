@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+</head>
+<body>
+    <h1>Your Shopping Cart</h1>
+    <ul id="cart-items">
+        <!-- Cart items will be dynamically added here -->
+    </ul>
+    <p>Total: $<span id="cart-total">0</span></p>
+    <p>Your Balance: $<span id="user-balance">30</span></p>
+    <button id="checkout-btn">Checkout</button>
+
+    <script>
+        // Example data (this should be dynamically generated)
+        let cart = [];
+        let userBalance = 30;
+
+        function addToCart(item, price) {
+            cart.push({item, price});
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartItems = document.getElementById('cart-items');
+            const cartTotal = document.getElementById('cart-total');
+            cartItems.innerHTML = '';
+            let total = 0;
+
+            cart.forEach(cartItem => {
+                const li = document.createElement('li');
+                li.textContent = `${cartItem.item} - $${cartItem.price}`;
+                cartItems.appendChild(li);
+                total += cartItem.price;
+            });
+
+            cartTotal.textContent = total.toFixed(2);
+        }
+
+        document.getElementById('checkout-btn').addEventListener('click', function() {
+            const total = parseFloat(document.getElementById('cart-total').textContent);
+            if (total <= userBalance) {
+                alert('Purchase successful!');
+                userBalance -= total;
+                document.getElementById('user-balance').textContent = userBalance.toFixed(2);
+                cart = []; // Clear the cart
+                updateCart(); // Update the cart display
+            } else {
+                alert('Insufficient balance. Please add more funds.');
+            }
+        });
+    </script>
+</body>
+</html>

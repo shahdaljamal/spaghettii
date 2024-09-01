@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test AJAX</title>
+</head>
+<body>
+    <button onclick="sendRequest()">Send Request</button>
+
+    <script>
+        function sendRequest() {
+            const xhr = new XMLHttpRequest();
+            xhr.open('POST', 'test.php', true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    alert('Response received: ' + xhr.responseText);
+                    console.log('Response received:', xhr.responseText);
+                }
+            };
+
+            xhr.send('test=data');
+        }
+    </script>
+</body>
+</html>

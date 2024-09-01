@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Spaghetti Shop</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Menu - Spaghetti Shop</h1>
+    </header>
+    <main>
+        <ul class="menu-list">
+            <li class="menu-item">
+                <img src="spaghetti.jpg" alt="Spaghetti">
+                <h2>Spaghetti</h2>
+                <p>Classic spaghetti with tomato sauce and Parmesan cheese.</p>
+            </li>
+            <li class="menu-item">
+                <img src="Spaghetti Carbonara.jpeg" alt="Spaghetti Carbonara">
+                <h2>Spaghetti Carbonara</h2>
+                <p>Creamy pasta with pancetta, egg, and Parmesan cheese.</p>
+            </li>
+            <li class="menu-item">
+                <img src="Bolognese.jpg" alt="Spaghetti Bolognese">
+                <h2>Spaghetti Bolognese</h2>
+                <p>Rich meat sauce with tomatoes and herbs.</p>
+            </li>
+            <li class="menu-item">
+                <img src="alfredo.jpg" alt="Spaghetti Alfredo">
+                <h2>Spaghetti Alfredo</h2>
+                <p>Delicious creamy Alfredo sauce with garlic and Parmesan cheese.</p>
+            </li>
+        </ul>
+<h1>Menu</h1>
+<ul>
+    <li>Spaghetti - $10 <button onclick="addToCart('Spaghetti', 10)">Add to Cart</button></li>
+    <li>Spaghetti Carbonara - $12 <button onclick="addToCart('Spaghetti Carbonara', 12)">Add to Cart</button></li>
+    <li>Spaghetti Bolognese - $16<button onclick="addToCart('Spaghetti Bolognese', 16)">Add to Cart</button></li>
+    <li>Spaghetti Alfredo - $11 <button onclick="addToCart('Spaghetti Alfredo', 11)">Add to Cart</button></li>
+    
+</ul>
+
+<script>
+    function addToCart(item, price) {
+        console.log('Add to Cart button clicked for:', item);  // This line will confirm the function is triggered
+
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', 'cart.php', true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4) {  // readyState 4 means the request is done.
+                if (xhr.status === 200) {  // status 200 is a successful return.
+                    console.log('Item added to cart:', item);
+                    console.log('Response from server:', xhr.responseText);
+                    alert(xhr.responseText); // Optional: Alert to confirm item added
+                } else {
+                    console.log('Error: Failed to add item to cart');
+                }
+            }
+        };
+        
+        xhr.send(`item=${encodeURIComponent(item)}&price=${encodeURIComponent(price)}`);
+    }
+</script>
+
+    </main>
+</body>
+</html>
