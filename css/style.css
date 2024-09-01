@@ -115,7 +115,7 @@ header {
 header h1 {
     margin: 0;
 }
-<img src="Spaghetti.jpg" alt="Spaghetti" style="width: 150px; height: auto;">
+<img src="Spaghetti.jpg" alt="Spaghetti";">
 <img src="Spaghetti Carbonara.jpeg" alt="Spaghetti Carbonara" style="width: 150px; height: auto;">
 /* Main Section */
 main {
