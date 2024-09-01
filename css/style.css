@@ -95,8 +95,6 @@ form input, form select, form button {
     margin: 10px; /* Optional: space around images */
     border-radius: 8px; /* Optional: adds rounded corners */
 }
-<img src="Spaghetti.jpg" alt="Spaghetti" style="width: 150px; height: auto;">
-<img src="Spaghetti Carbonara.jpeg" alt="Spaghetti Carbonara" style="width: 150px; height: auto;">
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
